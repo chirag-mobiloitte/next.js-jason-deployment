@@ -51,7 +51,7 @@ const MainComponent = styled("Box")(({ theme }) => ({
   },
 }));
 export default function Login() {
-  const route = useRouter();
+  const router = useRouter();
   const formInitialSchema = {
     email: "",
     password: "",
@@ -136,7 +136,7 @@ export default function Login() {
                 </Box>
                 <Box
                   onClick={() => {
-                    route.push("/auth/forgot-password");
+                    router.push("/auth/forgot-password");
                   }}
                 >
                   <Typography
@@ -153,7 +153,7 @@ export default function Login() {
                   color="primary"
                   type="submit"
                   onClick={() => {
-                    route.push("/admin-pannel");
+                    router.push("/auth/care-quality");
                   }}
                 >
                   Log in
@@ -199,15 +199,15 @@ export default function Login() {
 
         <Box className="footerbox">
           <Typography variant="body2">
-            You already have an account? &nbsp;
+          Don't have an account? &nbsp;
             <span
               style={{
                 color: "#000",
-                fontWeight: 400,
                 cursor: "pointer",
+                fontWeight: 500,
               }}
               onClick={() => {
-                route.push("/auth/signup");
+                router.push("/auth/signup");
               }}
             >
               Sign Up

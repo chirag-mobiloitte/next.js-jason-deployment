@@ -60,7 +60,7 @@ export default function optVerification() {
               />
               <Typography variant="body2" textAlign="right" className="resend">
                 Resend code in
-                <span style={{ color: "#7A69FE", fontWeight: "500" }}>
+                <span style={{ color: "#7A69FE", fontWeight: "500", marginLeft:"5px" }}>
                   120s
                 </span>
               </Typography>

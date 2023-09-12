@@ -577,7 +577,7 @@ body {
   align-items: center;
   background: #fff !important;
   border-radius: 50px;
-  height: 49px;
+  height: 60px;
   font-size: 16px;
   color: #000;
   padding-left: 8px;
@@ -594,7 +594,6 @@ body {
   display: flex;
   align-items: center;
   margin-left: 13px;
-  border-right: 2px solid rgba(128, 128, 128, 0.6196078431);
   padding-right: 10px;
   /* height: 50px; */
 }

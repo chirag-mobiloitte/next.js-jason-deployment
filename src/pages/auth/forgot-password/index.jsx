@@ -15,14 +15,14 @@ const MainComponent = styled("Box")((theme) => ({
 }));
 
 export default function ForgotPassword() {
-  const route = useRouter();
+  const router = useRouter();
   const formInitialSchema = {
     email: "",
   };
   const formValidationSchema = yep.object().shape({
     email: yep
       .string()
-      .email("Please enter a valid email.")
+      .email("Please enter your valid email address.")
       .max(256, "Email should not exceed 256 characters.")
       .required("Email is required."),
   });
@@ -68,7 +68,7 @@ export default function ForgotPassword() {
                 color="primary"
                 type="submit"
                 onClick={() => {
-                  route.push("/auth/otp-verification");
+                  router.push("/auth/otp-verification");
                 }}
               >
                 Send

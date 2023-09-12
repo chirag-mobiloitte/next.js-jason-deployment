@@ -17,6 +17,7 @@ import { useRouter } from "next/router";
 import CarePlanningCard from "src/components/CarePlanningCard";
 import { GrAttachment } from "react-icons/gr";
 import EastIcon from "@mui/icons-material/East";
+import { analysisAuditsCard } from "src/data";
 const MainComponent = styled("Box")(({ theme }) => ({
   "& .quickBox": {
     "& .searchButton": {

@@ -20,6 +20,9 @@ const FrontProfileBox = styled(Box)(({ theme }) => ({
     objectFit: "cover",
     borderRadius: "100px 100px 100px 100px",
   },
+  "& h2": {
+    marginBottom: "24px",
+  },
 }));
 
 export default function Createnewcare() {
@@ -28,7 +31,8 @@ export default function Createnewcare() {
   return (
     <>
       <FrontProfileBox>
-        <Container maxWidth="md">
+        <Container>
+          <Typography variant="h2">Care Plan Creation</Typography>
           <Grid
             container
             spacing={2}
@@ -64,8 +68,6 @@ export default function Createnewcare() {
               </Box>
             </Grid>
           </Grid>
-        </Container>
-        <Container maxWidth="lg">
           <Box className="dropContantBox">
             <Grid container spacing={2}>
               <Grid item lg={6} md={6} sm={6} xs={12}>
@@ -97,6 +99,11 @@ export default function Createnewcare() {
                 <Uploadstatus />
               </Grid>
             </Grid>
+            <Box mt={5} className="displayCenter">
+              <Button variant="contained" color="primary">
+                Continue
+              </Button>
+            </Box>
           </Box>
         </Container>
       </FrontProfileBox>

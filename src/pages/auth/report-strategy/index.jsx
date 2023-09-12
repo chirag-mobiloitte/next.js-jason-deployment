@@ -41,7 +41,7 @@ export default function ReportAndStategy() {
                 variant="contained"
                 color="primary"
                 onClick={() => {
-                  router.push("/auth/report-strategy");
+                  router.push("/care-plan");
                 }}
               >
                 Continue

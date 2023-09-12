@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "@emotion/styled";
 import {
   Box,
-  Button,
   Container,
   Divider,
   TextField,
@@ -90,6 +89,16 @@ const MainComponent = styled("Box")(({ theme }) => ({
       justifyContent: "space-between !important",
       padding: "45px 0",
     },
+    "& .menuOptionBox": {
+      display: "flex",
+      justifyContent: "space-between !important",
+    },
+    "& .copyBox":{
+      display: "flex",
+      justifyContent: "center",
+      alignItems:"center", 
+      paddingBottom:"10px"
+    }
   },
 }));
 
@@ -192,7 +201,6 @@ const Footer = () => {
               <TextField
                 fullWidth
                 variant="outlined"
-                id="outlined-basic"
                 placeholder="First Name"
               />
             </Box>
@@ -200,7 +208,6 @@ const Footer = () => {
               <TextField
                 fullWidth
                 variant="outlined"
-                id="outlined-basic"
                 placeholder="Last Name"
               />
             </Box>
@@ -208,17 +215,21 @@ const Footer = () => {
               <TextField
                 fullWidth
                 variant="outlined"
-                id="outlined-basic"
                 placeholder="Company Name"
               />
             </Box>
             <Box>
-              {/* <PhoneInputComponent value={phone} onChange={handlePhoneChange} /> */}
-
               <PhoneInput
                 placeholder="Enter phone number"
                 value={value}
                 onChange={setValue}
+              />
+            </Box>
+            <Box>
+              <TextField
+                fullWidth
+                variant="outlined"
+                placeholder="Book Appointment"
               />
             </Box>
           </Slider>
@@ -246,11 +257,6 @@ const Footer = () => {
                     Login
                   </Typography>
                 </Link>
-                {/* <Link href="/auth/login" className="linkText">
-                  <Typography color="#fff" variant="body1" ml={4}>
-                    Terms & Conditions
-                  </Typography>
-                </Link> */}
 
                 <Link href="/care-plan" className="linkText">
                   <Typography color="#fff" variant="body1" ml={4}>
@@ -265,11 +271,33 @@ const Footer = () => {
                 </Link>
               </Box>
             </Box>
-            <Box className="copyBox">
-              <Typography variant="body1" color="rgba(255, 255, 255, 0.60)">
-                Copyright©2023. Created with love by MVP CARE
-              </Typography>
+            <Box>
+              <Box className="menuOptionBox">
+                <Link href="bussiness-operations" className="linkText">
+                  <Typography color="#FFFFFF99">Business Operations</Typography>
+                </Link>
+                <Link href="/planning-flow" className="linkText">
+                  <Typography color="#FFFFFF99" ml={4}>
+                    Care Planning
+                  </Typography>
+                </Link>
+                <Link href="/human-resources" className="linkText">
+                  <Typography color="#FFFFFF99" ml={4}>
+                    Human Resources
+                  </Typography>
+                </Link>
+                <Link href="/document/document-creation" className="linkText">
+                  <Typography color="#FFFFFF99" ml={4}>
+                    Plan Meeting
+                  </Typography>
+                </Link>
+              </Box>
             </Box>
+          </Box>
+          <Box className="copyBox">
+            <Typography variant="body1" color="rgba(255, 255, 255, 0.60)">
+              Copyright©2023. Created with love by MVP CARE
+            </Typography>
           </Box>
         </Container>
       </Box>

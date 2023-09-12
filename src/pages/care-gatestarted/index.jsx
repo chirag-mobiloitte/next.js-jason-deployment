@@ -62,7 +62,7 @@ export default function CareProfile() {
               variant="contained"
               color="primary"
               onClick={() => {
-                router.push("/createnewcare-profile");
+                router.push("/");
               }}
             >
               Review Family Update Emails

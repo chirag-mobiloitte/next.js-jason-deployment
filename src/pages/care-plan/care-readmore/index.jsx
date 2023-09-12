@@ -152,6 +152,9 @@ export default function CareReadmore() {
               style={{
                 background: "linear-gradient(147deg, #FF8DCF 0%, #E95484 100%)",
               }}
+              onClick={() => {
+                router.push("/document/ask-question");
+              }}
             >
               Ask About care Plan
             </Button>
@@ -162,6 +165,9 @@ export default function CareReadmore() {
               className="createvariantButton"
               style={{
                 background: "linear-gradient(147deg, #F9A932 0%, #F37535 100%)",
+              }}
+              onClick={() => {
+                router.push("/document/meal-plan");
               }}
             >
               Create Meal Plan

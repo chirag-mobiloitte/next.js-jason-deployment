@@ -17,9 +17,9 @@ export default function Aspect() {
           color="primary"
           size="large"
           className="aspectborder aspectbutton"
-          endIcon={<ArrowOutwardIcon style={{ color: "#161E29" }} />}
+          endIcon={<ArrowOutwardIcon style={{ color: "#FFF" }} />}
         >
-          View All
+         Get Started
         </Button>
 
         <Box style={{ position: "relative" }}>

@@ -11,6 +11,7 @@ import {
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import Link from "next/link";
 
 const MainComponent = styled("Box")(({ theme }) => ({
   "& .mainBox": {
@@ -61,8 +62,14 @@ const MainComponent = styled("Box")(({ theme }) => ({
       //   fontSize: "40px",
       // }
     },
+    "& .copyrightBox": {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      paddingBottom: "10px",
+    },
 
-    "& .copyRightBox": {
+    "& .menuBox": {
       display: "flex",
       justifyContent: "space-between",
       marginTop: "50px",
@@ -136,7 +143,7 @@ const Footer = () => {
           </Box>
 
           <Divider sx={{ backgroundColor: "#FFFFFF40", marginTop: "20px" }} />
-          <Box className="copyRightBox">
+          <Box className="menuBox">
             <Box className="titleBox">
               <Box>
                 <Typography variant="h5" color="#FFFFFF">
@@ -157,10 +164,25 @@ const Footer = () => {
               </Box>
             </Box>
             <Box>
-              <Typography variant="body2" marginTop="10px" color="#FFFFFF99">
-                Copyright©2023. Created with love by MVP CARE
-              </Typography>
+              <Link href="bussiness-operations" className="linkText">
+                <Typography color="#FFFFFF99">Business Operations</Typography>
+              </Link>
+              <Link href="/planning-flow" className="linkText">
+                <Typography color="#FFFFFF99" ml={4}>
+                  Care Planning
+                </Typography>
+              </Link>
+              <Link href="/human-resources" className="linkText">
+                <Typography color="#FFFFFF99" ml={4}>
+                  Human Resources
+                </Typography>
+              </Link>
             </Box>
+          </Box>
+          <Box className="copyrightBox">
+            <Typography variant="body2" marginTop="10px" color="#FFFFFF99">
+              Copyright©2023. Created with love by MVP CARE
+            </Typography>
           </Box>
         </Container>
       </Box>

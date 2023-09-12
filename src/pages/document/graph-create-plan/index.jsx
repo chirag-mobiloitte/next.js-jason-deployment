@@ -13,7 +13,7 @@ import {
 import React from "react";
 import CircularProgressBar from "src/components/CircularProgressBar";
 
-const GraphCreatePlanBox = styled("Box")((theme) => ({
+const GraphCreatePlanBox = styled("Box")(({theme}) => ({
   "& .writeBox": {
     "& h5": {
       color: "#161E29",
@@ -35,6 +35,13 @@ const GraphCreatePlanBox = styled("Box")((theme) => ({
   "& .css-1blfdnv-MuiInputBase-root-MuiOutlinedInput-root ": {
     marginBottom: "16px",
   },
+  "& .carePlanMainBox":{
+    marginTop:"80px",
+    [theme.breakpoints.down("sm")]: {
+      marginTop:"40px",
+    },
+ 
+  }
 }));
 
 export default function GraphCreatePlan() {
@@ -49,9 +56,9 @@ export default function GraphCreatePlan() {
             <Box>
               <CircularProgressBar progress="75"/>
             </Box>
-            <Box>
+            <Box className="carePlanMainBox">
               <Grid container spacing={2}>
-                <Grid item xs={12} sm={12} md={4} lg={4}>
+                <Grid item xs={12} sm={12} md={3} lg={3}>
                   <Box className="writeBox">
                     <Typography variant="h5">Care Plan</Typography>
                     <Typography variant="body1">
@@ -59,8 +66,8 @@ export default function GraphCreatePlan() {
                     </Typography>
                   </Box>
                 </Grid>
-                <Grid item xs={12} sm={12} md={8} lg={8}>
-                <Typography variant="body1">What is the service users full name?</Typography>
+                <Grid item xs={12} sm={12} md={9} lg={9}>
+                <Typography variant="body1" mb={1}>What is the service users full name?</Typography>
                   <Grid container spacing={2}>
                     <Grid item xs={12} sm={6} md={6}>
                       <Box className="documentType">

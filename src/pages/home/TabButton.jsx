@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import { Grid, Box, Typography, Button } from "@mui/material";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import ScrollAnimation from "react-animate-on-scroll";
+import { useRouter } from "next/router";
+
+
 const TabbedNavigation = ({ tabButtonData }) => {
+  const router = useRouter();
   const [activeTab, setActiveTab] = useState(tabButtonData && tabButtonData[0]);
 
   return (
@@ -49,6 +53,9 @@ const TabbedNavigation = ({ tabButtonData }) => {
                 color="primary"
                 size="large"
                 endIcon={<ArrowOutwardIcon />}
+                onClick={() => {
+                  router.push("/auth/login");
+                }}
               >
                 Get Started
               </Button>

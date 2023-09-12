@@ -7,12 +7,16 @@ import {
   IconButton,
   Typography,
   Box,
-  Button,
+  Button,FormControl,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
+
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import { BsUpload } from "react-icons/bs";
+import { useRouter } from "next/router";
+
 const Modal = ({ open, handleClose }) => {
+  const router = useRouter();
   return (
     <Dialog open={open} onClose={handleClose} fullWidth maxWidth="sm">
       <DialogTitle
@@ -60,6 +64,7 @@ const Modal = ({ open, handleClose }) => {
             className="createvariantButton1"
             startIcon={<BsUpload />}
             style={{ textTransform: "capitalize" }}
+            onClick={()=>{router.push("/document/upload-document")}}
           >
             Upload
           </Button>{" "}
@@ -69,6 +74,7 @@ const Modal = ({ open, handleClose }) => {
             color="primary"
             className="createvariantButton1"
             endIcon={<ArrowOutwardIcon />}
+            onClick={()=>{router.push("/create-report")}}
           >
             Create From Sratch
           </Button>

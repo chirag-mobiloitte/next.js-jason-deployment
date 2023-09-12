@@ -74,7 +74,8 @@ export default function RecentDocumentFilter({ title }) {
                     endAdornment: (
                       <InputAdornment position="end">
                         <Box className="sendButton">
-                          <IconButton>
+        
+                          <IconButton >
                             <SearchIcon
                               sx={{
                                 color: "rgba(0, 0, 0, 0.60)",

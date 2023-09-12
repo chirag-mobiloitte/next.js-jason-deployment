@@ -9,13 +9,14 @@ import {
   TextField,
   InputAdornment,
   IconButton,
+  FormControl
 } from "@mui/material";
 import { styled } from "@mui/system";
 import { GrAttachment } from "react-icons/gr";
 import { AiFillDelete, AiOutlineCheck } from "react-icons/ai";
 import { IoClose } from "react-icons/io5";
 import Progressbar from "src/components/Progressbar";
-
+import SearchIcon from "@mui/icons-material/Search";
 const DocumentUploaderBox = styled("Box")(({ theme }) => ({
   "& .carePlanBox": {
     "& h5": {
@@ -59,7 +60,34 @@ export default function DocumentUploader({ heading }) {
   return (
     <DocumentUploaderBox>
       <Box className="carePlanBox">
-        <Typography variant="h2">{heading}</Typography>
+        <Box className="displaySpacebetween">
+          <Typography variant="h2">{heading}</Typography>
+          <Box className="searchBox">
+            <FormControl fullWidth>
+              <TextField
+                id="standard-basic"
+                variant="standard"
+                placeholder="Search here.."
+                InputProps={{
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <Box className="sendButton">
+                        <IconButton className="iconTransparent">
+                          <SearchIcon
+                            sx={{
+                              fontSize: "30px",
+                            }}
+                          />
+                        </IconButton>
+                      </Box>
+                    </InputAdornment>
+                  ),
+                }}
+              />
+            </FormControl>
+          </Box>
+        </Box>
+
         <Typography variant="h5">Upload a document or add a link</Typography>
         <Typography variant="body2">
           Upload a document and once it is uploaded you can ask questions about

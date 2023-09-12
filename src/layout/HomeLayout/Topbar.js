@@ -54,7 +54,7 @@ export default function Header() {
             style={{ paddingLeft: "0px" }}
             className="displayEnd"
           >
-            <IconButton onClick={() => setOpen(true)}>
+            <IconButton onClick={() => {router.push("/admin-pannel/emails")}}>
               <NotificationsIcon sx={{ color: "#A4A4A7" }} />
             </IconButton>
             <Box className="updateButtonBox">

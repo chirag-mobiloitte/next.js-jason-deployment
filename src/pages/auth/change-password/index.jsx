@@ -25,8 +25,14 @@ const MainComponent = styled("Box")(({ theme }) => ({
     marginTop: "40px",
   },
   "& .iconsclass1": {
+    position: "absolute",
+    zIndex: "99",
     color: "#585757",
     fontSize: "20px",
+  },
+  "& .MuiIconButton-root": {
+    background: "transparent !important",
+    top: "-10px",
   },
 }));
 
@@ -34,7 +40,7 @@ export default function changePassword() {
   const route = useRouter();
   const [showPassword, setShowPassword] = useState(false);
   const [showPassword1, setShowPassword1] = useState(false);
-  const [showPassword2, setShowPassword2] = useState(false);
+
   const formInitialSchema = {
     password: "",
     confirmPassword: "",
@@ -45,7 +51,7 @@ export default function changePassword() {
       .trim()
       .matches(
         /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
-        "The new password must contain at least 8 characters, one uppercase letter, one lowercase letter, one number, and one special character."
+        "Password must be at least 8 characters."
       )
       .required("Please enter a new password.")
       .min(6, "The new password must be at least 6 characters long.")
@@ -54,10 +60,7 @@ export default function changePassword() {
     confirmPassword: yep
       .string()
       .required("Please enter the confirmation password.")
-      .oneOf(
-        [yep.ref("password"), null],
-        "The confirmation password does not match."
-      ),
+      .oneOf([yep.ref("password"), null], "Passwords Doesn't match."),
   });
   const handleFormSubmit = async (values) => {};
   return (
